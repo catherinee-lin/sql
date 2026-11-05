@@ -58,6 +58,10 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 
 ```
 Your answer...
+Slowly changing dimensions (SCD) type 2 retain changes, while SCD type 1 overwrites the data. 
+SCD type 2 would be more appropriate for the CUSTOMER_ADDRESS table, as there may be a need to refer to a customer's past address when consulting past purchases.
+For example, the address that a delivery order that was sent to, or if the customer wanted to verify which address was used. 
+
 ```
 
 ***
@@ -194,4 +198,20 @@ Consider, for example, concepts of labour, bias, LLM proliferation, moderating c
 
 ```
 Your thoughts...
+One of the ethical issues important to this story is that biases that may be present among the people who annotated and 
+trained the datatset will now be perpetuated by machine learning or AI models that utilize the dataset, which was touched on in the article. 
+This can become a major issue in settings such as police enforcement or flagging suspicious persons at the airport, where normal people may face consequences 
+due to underlying biases in the trained AI/facial recognition stemming from the original trained dataset. Even if the model was trained on more statistical data,
+it may detect patterns that don't necessarily make sense and are correlatively due to random luck or other confounding variables. For example, ice cream sales and
+shark attacks may be positively correlated with each other, but are is not a causal relationship. If not given the "both occurs more when the temperature is higher" or the 
+confounding variable, the model may incorrectly conclude that there must be some sort of direct relationship between ice cream consumption and shark attacks.
+While it's easier to identify the confounding variable in this example, there are many instances in the world where the confounding variable is not known and thus 
+may not have been included in the initial training data provided to the model, as such also results in a sort of human bias. This can be especially
+prominent in the medical field, where some sort of unknown pollutant may cause a disease, but has never been suspected and thus not measured or included in the dataset.
+Additionally, copyrights and permissions also become complicated in model training. The article mentioned that ImageNet was trained on images on the Internet, 
+and this leads to one of the major concerns in the digital community in the recent years, the use of other's intellectual property to train models. Many digital media 
+are publicy accessible but this doesn't equate to permission to use the media for model training, especially use in generative AI. I don't believe there's any way to protect
+intellectual property from use in AI training currently, but this is crucial for protecting artists' creative freedoms and "rights" to their work.
+Overall, I think it is inevitable that AI/model training will be biased as all the information in the world is processed by humans at some point or selected to use for AI training by a human.
+
 ```
